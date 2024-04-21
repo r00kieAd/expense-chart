@@ -1,3 +1,17 @@
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+    --Soft-red2: hsl(10, 70%, 77%);
+}
+
+body {
+    background-color: var(--Cream);
+}
+
 #main {
     position: absolute;
     top: 50%;
@@ -8,32 +22,97 @@
     padding: 1%;
 }
 
+.dm-sans-custom {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 #balance {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid orange;
-    padding: 1% 2%;
+    border: 1px solid var(--Soft-red);
+    padding: 1% 3%;
     margin-bottom: 3%;
+    font-size: 18px;
+    background-color: var(--Soft-red);
+    color: var(--Cream);
+    border-radius: 10px;
+}
+
+.balanceInfo {
+    line-height: 1;
+    margin-bottom: 3%;
+    font-size: 12px;
+}
+
+.balanceAmount {
+    font-size: 30px;
+}
+
+.logo {
+    margin-top: 3%;
 }
 
 #report {
     position: relative;
-    border: 1px solid black;
-    padding: 1% 5%;
+    border: 1px solid transparent;
+    padding: 0 5%;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .chartTitle {
-    margin-left: 2.5%;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--Dark-brown);
 }
 
 .chartDiv {
-    padding: 1%;
+    padding: 0 1%;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--Cream);
+    margin: 20px 0;
 }
 
 .chartSummary {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 2%;
+    padding: 1%;
+    line-height: 1;
+    color: var(--Dark-brown);
+}
+
+.summaryDetails {
+    font-size: 12px;
+    line-height: 0.5;
+}
+
+.summaryTitle {
+    color: var(--Medium-brown);
+    word-spacing: 1px;
+}
+
+.total {
+    font-size: 30px;
+}
+
+.estimate {
+    line-height: 0.1;
+}
+
+.progress {
+    font-size: 18px;
+}
+
+.duration {
+    font-size: 14px;
+    color: var(--Medium-brown);
 }

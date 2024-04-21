@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Chart</title>
   <link rel="stylesheet" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-  <div id="main">
+  <div id="main" class="dm-sans-custom">
     <div id="balance" class="subdiv">
       <div class="balanceInfo">
         <p class="balanceTitle">My balance</p>
@@ -20,10 +27,10 @@
     </div>
     <div id="report" class="subdiv">
       <div class="chartTitle">
-        <h4>Spending - Last 7 days</h4>
+        <p>Spending - Last 7 days</p>
       </div>
       <div class="chartDiv">
-        <canvas id="myCanvas" width="450" height="220">
+        <canvas id="myCanvas" width="450" height="210">
         </canvas>
       </div>
       <hr>
@@ -34,7 +41,7 @@
         </div>
         <div class="estimate">
           <p class="progress">+2.4%</p>
-          <p>from last month</p>
+          <p class="duration">from last month</p>
         </div>
       </div>
     </div>
@@ -42,4 +49,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

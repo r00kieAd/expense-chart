@@ -16,10 +16,8 @@
   <img alt="License" src="https://img.shields.io/github/license/r00kieAd/expense-chart?color=56BEB8">
 </p>
 
-Status
-
 <h4 align="center"> 
-	🚧  Expense Chart 🚀 Under construction...  🚧
+	🚧  Expense Chart 🚀 Under construction...  Mobile-view Pending 🚧
 </h4> 
 
 <hr>
@@ -36,23 +34,24 @@ Status
 
 ## :dart: About ##
 
-This is frontend mentor project on displaying a bar chart on a webpage made with json data. Users will be able to look at the analytics of expenses. This project is not yet completed.
+This is frontend mentor project on displaying a bar chart on a webpage made with json data. Users will be able to look at the analytics of expenses and it's details by interacting with the bar chart. This project is not yet completed.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Interactive;\
+:heavy_check_mark: Subtle;\
+:heavy_check_mark: Dynamic;
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [HTML5](https://expo.io/)
-- [CSS3](https://nodejs.org/en/)
-- [JavaScript Fetch](https://pt-br.reactjs.org/)
-- [Jquery](https://reactnative.dev/)
-- [VSCode](https://www.typescriptlang.org/)
+- [HTML5](https://www.w3schools.com/html/default.asp)
+- [CSS3](https://www.w3schools.com/css/default.asp)
+- [HTML Canvas](https://www.w3schools.com/tags/ref_canvas.asp)
+- [JavaScript Fetch](https://www.w3schools.com/js/default.asp)
+- [JQuery](https://www.w3schools.com/jquery/default.asp)
+- [VSCode](https://code.visualstudio.com/)
 
 ## :memo: License ##
 

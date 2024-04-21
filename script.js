@@ -10,20 +10,21 @@ async function getData() {
 async function displayChart(canvas) {
     const jsonData = await getData();
     const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "red";
-    ctx.strokeStyle = "red";
     const barWidth = 40;
     const spacing = 20;
     let x = 10;
     let y = 0;
     jsonData.forEach((e) => {
+        ctx.fillStyle = "hsl(10, 79%, 65%)";
+        ctx.strokeStyle = "hsl(10, 79%, 65%)";
         ctx.beginPath();
         ctx.roundRect(x, (canvas.height - e.amount - 100), barWidth, e.amount + 80, [3]);
         ctx.fill()
         ctx.stroke();
+        ctx.fillStyle = "hsl(28, 10%, 53%)";
         ctx.font = "12px Sans-Serif";
         ctx.textBaseline = 'alphabetic';
-        ctx.fillText(e.day, x + 7, canvas.height);
+        ctx.fillText(e.day, e.day == 'fri' ? x + 13 : x + 8, canvas.height);
         x += barWidth + spacing;
     })
 }
@@ -45,20 +46,22 @@ async function handleMouseMove(canvas, event) {
         let rectWidth = barWidth;
         let rectHeight = e.amount + 80;
         if (mouseX >= rectX && mouseX <= rectX + rectWidth && mouseY >= rectY && mouseY <= rectY + rectHeight) {
-            ctx.fillStyle = "white";
-            ctx.strokeStyle = "black";
+            ctx.fillStyle = "hsl(25, 47%, 15%)";
+            ctx.strokeStyle = "hsl(25, 47%, 15%)";
             ctx.beginPath();
-            ctx.roundRect(x - 5, canvas.height - e.amount - 150, barWidth + 10, 30, [3]);
+            ctx.roundRect(x - 4, canvas.height - e.amount - 150, barWidth + 8, 30, [3]);
             ctx.fill();
             ctx.stroke();
             ctx.textBaseline = 'bottom';
-            ctx.fillStyle = "black";
-            ctx.fillText(e.amount, x + 4, canvas.height - e.amount - 127);
+            ctx.fillStyle = "hsl(27, 66%, 92%)";
+            ctx.fillText(`$${e.amount}`, x + 2, canvas.height - e.amount - 127);
+            ctx.fillStyle = e.day == 'wed' ? "hsl(186, 34%, 60%)" : "hsl(10, 70%, 77%)";
+            ctx.strokeStyle = e.day == 'wed' ? "hsl(186, 34%, 60%)" : "hsl(10, 70%, 77%)";
         } else {
-            ctx.fillStyle = "red";
-            ctx.strokeStyle = "red";
+            ctx.fillStyle = "hsl(10, 79%, 65%)";
+            ctx.strokeStyle = "hsl(10, 79%, 65%)";
             // extra dimensions to ensure stroke borders are also wiped out
-            ctx.clearRect(x - 6, canvas.height - e.amount - 151, barWidth + 12, 32);
+            ctx.clearRect(x - 5, canvas.height - e.amount - 151, barWidth + 10, 32);
         }
         ctx.beginPath();
         ctx.roundRect(x, (canvas.height - e.amount - 100), barWidth, e.amount + 80, [3]);
