@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 28rem;
+    width: 30rem;
     border: 1px solid transparent;
     padding: 1%;
 }
@@ -20,7 +20,7 @@
 #report {
     position: relative;
     border: 1px solid black;
-    padding: 1%;
+    padding: 1% 5%;
 }
 
 .chartTitle {
@@ -29,7 +29,6 @@
 
 .chartDiv {
     padding: 1%;
-    margin-left: 2.5%;
 }
 
 .chartSummary {
