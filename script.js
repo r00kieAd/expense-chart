@@ -1,5 +1,6 @@
 const barWidth = 40;
 const spacing = 20;
+
 async function getData() {
     const response = await fetch('data.json');
     if (!response.ok) {
