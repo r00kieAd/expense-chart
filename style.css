@@ -116,3 +116,37 @@ hr {
     font-size: 14px;
     color: var(--Medium-brown);
 }
+
+@media screen and (max-width: 490px) {
+    
+    #main {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: auto;
+        border: none;
+        padding: 0;
+        overflow: hidden;
+        margin-top: 10vh;
+    }
+
+
+    #report {
+        width: inherit;
+        overflow: hidden;
+    }
+
+    .chartDiv {
+        padding: 1% 0 3% 0;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .chartDiv {
+        overflow-x: scroll;
+    }
+
+}

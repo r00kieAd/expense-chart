@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Expense Chart" />
+  <img src="images/favicon-32x32.png" alt="Expense Chart" />
 
   &#xa0;
 </div>
@@ -15,10 +15,10 @@
 
   <img alt="License" src="https://img.shields.io/github/license/r00kieAd/expense-chart?color=56BEB8">
 </p>
-
+<!-- 
 <h4 align="center"> 
 	🚧  Expense Chart 🚀 Under construction...  Mobile-view Pending 🚧
-</h4> 
+</h4>  -->
 
 <hr>
 
@@ -34,7 +34,7 @@
 
 ## :dart: About ##
 
-This is frontend mentor project on displaying a bar chart on a webpage made with json data. Users will be able to look at the analytics of expenses and it's details by interacting with the bar chart. This project is not yet completed.
+This is frontend mentor project on displaying a bar chart on a webpage made with json data. Users will be able to look at the analytics of expenses and it's details by interacting with the bar chart. View will change according to screen sizes, only thing that'll not change is the bar chart's size and shape. If out of view, a scroller will be presented for viewers to scroll and see full data without distorting other elements in the webpage.
 
 ## :sparkles: Features ##
 

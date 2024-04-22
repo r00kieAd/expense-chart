@@ -1,3 +1,5 @@
+const barWidth = 40;
+const spacing = 20;
 async function getData() {
     const response = await fetch('data.json');
     if (!response.ok) {
@@ -10,8 +12,6 @@ async function getData() {
 async function displayChart(canvas) {
     const jsonData = await getData();
     const ctx = canvas.getContext("2d");
-    const barWidth = 40;
-    const spacing = 20;
     let x = 10;
     let y = 0;
     jsonData.forEach((e) => {
@@ -34,10 +34,7 @@ async function handleMouseMove(canvas, event) {
     const rect = canvas.getBoundingClientRect();
     const mouseX = event.clientX - rect.left;
     const mouseY = event.clientY - rect.top;
-    // console.log(`${mouseX}, ${mouseY}`);
     const jsonData = await getData();
-    const barWidth = 40;
-    const spacing = 20;
     let x = 10;
     const ctx = canvas.getContext("2d");
     jsonData.forEach((e) => {
@@ -45,6 +42,8 @@ async function handleMouseMove(canvas, event) {
         let rectY = canvas.height - e.amount - 100;
         let rectWidth = barWidth;
         let rectHeight = e.amount + 80;
+        // alert(`mouseX: ${mouseX} vs rectX: ${rectX} vs rectX + rectWidth: ${rectX + rectWidth}`);
+        // alert(`mouseY: ${mouseY} vs rectY: ${rectY} vs rectY + rectHeight: ${rectY + rectHeight}`);
         if (mouseX >= rectX && mouseX <= rectX + rectWidth && mouseY >= rectY && mouseY <= rectY + rectHeight) {
             ctx.fillStyle = "hsl(25, 47%, 15%)";
             ctx.strokeStyle = "hsl(25, 47%, 15%)";
