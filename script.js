@@ -58,8 +58,8 @@ async function handleMouseMove(canvas, event) {
             ctx.fillStyle = e.day == 'wed' ? "hsl(186, 34%, 60%)" : "hsl(10, 70%, 77%)";
             ctx.strokeStyle = e.day == 'wed' ? "hsl(186, 34%, 60%)" : "hsl(10, 70%, 77%)";
         } else {
-            ctx.fillStyle = "hsl(10, 79%, 65%)";
-            ctx.strokeStyle = "hsl(10, 79%, 65%)";
+            ctx.fillStyle = e.day == 'wed' ? "hsl(186, 34%, 60%)" : "hsl(10, 79%, 65%)";
+            ctx.strokeStyle = e.day == 'wed' ? "hsl(186, 34%, 60%)" : "hsl(10, 79%, 65%)";
             // extra dimensions to ensure stroke borders are also wiped out
             ctx.clearRect(x - 5, canvas.height - e.amount - 151, barWidth + 10, 32);
         }
