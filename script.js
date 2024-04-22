@@ -16,8 +16,8 @@ async function displayChart(canvas) {
     let x = 10;
     let y = 0;
     jsonData.forEach((e) => {
-        ctx.fillStyle = "hsl(10, 79%, 65%)";
-        ctx.strokeStyle = "hsl(10, 79%, 65%)";
+        ctx.fillStyle = e.day == 'wed' ? "hsl(10, 79%, 65%)" : "hsl(10, 70%, 77%)";
+        ctx.strokeStyle = e.day == 'wed' ? "hsl(10, 79%, 65%)" : "hsl(10, 70%, 77%)";
         ctx.beginPath();
         ctx.roundRect(x, (canvas.height - e.amount - 100), barWidth, e.amount + 80, [3]);
         ctx.fill()
